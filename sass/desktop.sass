@@ -1,0 +1,112 @@
+@use 'guide.sass'
+
+// main container
+.main-wrapper
+	display: grid
+	grid-template-columns: repeat(4, 1fr)
+	grid-template-rows: repeat(2, 1fr)
+	gap: 15px 20px
+	width: 80vw
+	height: 72vh
+	font-family: guide.$primary-font
+
+// grid layout
+.article
+	@include guide.flexbox(column, null, null, 10px)
+	padding: 25px
+	border-radius: 10px
+
+.article-principal
+	position: relative
+	grid-area: 1 / 1 / 2 / 3
+	background-color: guide.$moderate-violet
+
+.article-secondary
+	background-color: guide.$very-dark-grayish-blue
+
+.article-tertiary
+	grid-area: 1 / 4 / 3 / 5
+	background-color: guide.$white
+
+.article-fourth
+	grid-area: 2 / 2 / 3 / 4
+	background-color: guide.$very-dark-blackish-blue
+
+.article-fifth
+	background-color: guide.$white
+
+// principal article's background
+.background
+	position: absolute
+	top: 0
+	right: 15%
+	width: 70px
+
+// articles content
+.user-info
+	@include guide.flexbox(row, null, center, 20px)
+	width: 100%
+
+.user__picture
+	width: 35px
+	height: 35px
+	border-radius: 100%
+
+.img-border
+	border: 2px solid hsl(264, 82%, 70%)
+
+.verified-acount
+	@include guide.flexbox(column, start, null, 4px)
+
+.user__name
+	margin: 0
+	font-size: guide.$sm-size
+	font-weight: guide.$semi-bold
+
+.first-name, .second-name, .fourth-name
+	color: guide.$light-gray
+
+.third-name, .fifth-name
+	color: guide.$very-dark-grayish-blue
+
+.user__verification
+	margin: 0
+	font-size: guide.$sm-size
+
+.first-name-verification, .second-name-verification, .fourth-name-verification
+	color: guide.$light-gray
+	opacity: 0.5
+
+.third-name-verification, .fifth-name-verification
+	color: guide.$very-dark-grayish-blue
+	opacity: 0.5
+
+.article__title
+	margin: 0
+	font-size: 1.7rem
+	color: guide.$light-grayish-blue
+
+.first-title
+	color: guide.$white
+
+.third-title, .fifth-title
+	color: guide.$very-dark-grayish-blue
+
+.article__text
+	margin: 0
+	font-size: guide.$sm-size
+	font-weight: guide.$medium
+	line-height: 1.4
+	&::after
+		content: ' " '
+
+	&::before
+		content: ' " '
+
+.first-text, .second-text, .fourth-text
+	color: guide.$light-gray
+	opacity: 0.7
+
+.third-text, .fifth-text
+	color: guide.$very-dark-grayish-blue
+	opacity: 0.7

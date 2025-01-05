@@ -1,0 +1,47 @@
+// primary colors
+$moderate-violet: hsl(263, 55%, 52%)
+$very-dark-blackish-blue: hsl(219, 29%, 14%)
+$very-dark-grayish-blue: hsl(217, 19%, 35%)
+$white: hsl(0, 0%, 100%)
+
+// neutral colors
+$light-gray: hsl(0, 0%, 81%)
+$light-grayish-blue: hsl(210, 46%, 95%)
+
+// typography
+$primary-font: "Barlow Semi Condensed", sans-serif
+
+// font-weights
+$medium: 500
+$semi-bold: 600
+
+// font-sizes
+$sm-size: 1.3rem
+
+// general resets
+*
+	box-sizing: border-box
+
+html
+	font-size: 62.5%
+
+body
+	display: grid
+	place-content: center
+	width: 100%
+	min-height: 100vh
+	margin: 0
+	background-color: $light-grayish-blue
+
+// mixins
+@mixin flexbox ($direction:null, $justify:null, $align:null, $gap:null)
+	display: flex
+	flex-direction: $direction
+	justify-content: $justify
+	align-items: $align
+	gap: $gap
+
+// breakpoint
+@media screen and (max-width: 540px)
+	body
+		padding: 40px 10px
